@@ -28,12 +28,12 @@ class RestController(@Autowired @Qualifier("redisRepo")
     }
 
     @GetMapping("/{name}")
-    fun getUser(@PathVariable("name") name:String):User? {
+    fun getUser(@PathVariable("name") name:String): User? {
         return userRepo.getUser(name);
     }
 
     @PostMapping("/")
-    fun createUser(@RequestBody user:User):User {
+    fun createUser(@RequestBody user: User): User {
         return userRepo.addUser(user);
     }
 }

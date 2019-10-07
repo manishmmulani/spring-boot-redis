@@ -13,11 +13,11 @@ class InmemoryUserRepository : UserRepository {
         return users;
     }
 
-    override fun getUser(name:String):User? {
+    override fun getUser(name:String): User? {
         return users.filter { it.name == name }.firstOrNull()
     }
 
-    override fun addUser(user:User):User{
+    override fun addUser(user: User): User {
         val existingUser = getUser(user.name)
         if (existingUser != null) {
             return existingUser

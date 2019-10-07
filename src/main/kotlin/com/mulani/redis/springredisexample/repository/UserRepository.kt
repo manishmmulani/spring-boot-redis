@@ -6,7 +6,7 @@ interface UserRepository {
 
     fun getAllUsers(): List<User>
 
-    fun getUser(name:String):User?
+    fun getUser(name:String): User?
 
-    fun addUser(user:User):User
+    fun addUser(user: User): User
 }
